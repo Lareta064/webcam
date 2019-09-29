@@ -5,7 +5,7 @@
 
     .info-text {
         margin-top: 80px;
-        margin-bottom: 80px;
+        margin-bottom: 110px;
     }
 }
 
@@ -28,4 +28,29 @@
 
 .text-blockquote {
     position: relative;
+}
+
+.text-blockquote:after,
+.text-blockquote:before {
+    content: "";
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background-image: url(../img/icons/quote2.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.text-blockquote:before {
+    top: 0;
+    left: -16%;
+    transform: translateY(-100%);
+}
+
+.text-blockquote:after {
+    transform: translateY(100%);
+    bottom: 0;
+    right: -16%;
+    background-image: url(../img/icons/quote1.png);
 }
