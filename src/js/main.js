@@ -28,3 +28,17 @@ function hideMobMenu() {
         mobMenu.classList.remove('active');
     }
 }
+
+//-jQuery
+$(document).ready(function () {
+
+    $('#descrition-slider').owlCarousel({
+        items: 1,
+        loop: true,
+        dots: true,
+        nav: true,
+        navText: ['<i class="fas fa-arrow-left"></i>', '<i class="fas fa-arrow-right"></i>'],
+        navSpeed: 900,
+        dotsSpeed: 900,
+    });
+});
