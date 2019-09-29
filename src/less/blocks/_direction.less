@@ -9,21 +9,26 @@
     }
 }
 
-.title-3 {
-    font-size: 34px;
-
-}
-
 .direction-cards-item__icon {
     position: absolute;
     right: 0;
     top: 0;
     transform: translate(50%, -50%);
-    width: 90px;
-    height: 90px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
     border: 5px solid #f9f9f9;
     overflow: hidden;
+
+    @media(min-width: 992px) {
+        width: 90px;
+        height: 90px;
+    }
+
+    @media(min-width: 1440px) {
+        width: 100px;
+        height: 100px;
+    }
 }
 
 .text-blockquote {
@@ -34,8 +39,8 @@
 .text-blockquote:before {
     content: "";
     position: absolute;
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
     background-image: url(../img/icons/quote2.png);
     background-position: center;
     background-repeat: no-repeat;
@@ -44,13 +49,39 @@
 
 .text-blockquote:before {
     top: 0;
-    left: -16%;
+    left: 0;
     transform: translateY(-100%);
 }
 
 .text-blockquote:after {
     transform: translateY(100%);
     bottom: 0;
-    right: -16%;
+    right: 0;
     background-image: url(../img/icons/quote1.png);
+}
+
+@media(min-width: 768px) {
+    .text-blockquote:before {
+        left: -10%;
+        width: 70px;
+        height: 70px;
+    }
+
+    .text-blockquote:after {
+        right: -10%;
+        width: 70px;
+        height: 70px;
+    }
+}
+
+@media(min-width: 1200px) {
+    .text-blockquote:before {
+        left: -16%;
+
+    }
+
+    .text-blockquote:after {
+        right: -16%;
+
+    }
 }
