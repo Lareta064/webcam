@@ -34,19 +34,37 @@ let answerBlock = document.querySelectorAll('.questions-accordion__item-descrip'
 
 for (let i = 0; i < clickableItem.length; i++) {
     clickableItem[i].onclick = function () {
-        const plusMinusIcons = this.querySelectorAll('i');
-        const showedAnswer = this.parentElement.querySelector('.questions-accordion__item-descrip');
-
-        // console.log(plusMinusIcons);
-        // console.log(showedAnswer);
-        toggleActive(this)
-        for (let i = 0; i < plusMinusIcons.length; i++) {
-
-            toggleActive(plusMinusIcons[i]);
+        if (this.classList.contains('active'))
+            hideAccordionItem(this);
+        else {
+            for (let i = 0; i < clickableItem.length; i++) {
+                hideAccordionItem(clickableItem[i]);
+            }
+            showAccordionItem(this);
         }
-        toggleActive(showedAnswer);
-
     }
+}
+
+function showAccordionItem(accItem) {
+    const plusIcon = accItem.querySelector('.fa-plus');
+    const minusIcon = accItem.querySelector('.fa-minus');
+    const showedAnswer = accItem.parentElement.querySelector('.questions-accordion__item-descrip');
+
+    accItem.classList.add('active');
+    minusIcon.classList.add('active');
+    plusIcon.classList.remove('active');
+    showedAnswer.classList.add('active');
+}
+
+function hideAccordionItem(accItem) {
+    const plusIcon = accItem.querySelector('.fa-plus');
+    const minusIcon = accItem.querySelector('.fa-minus');
+    const showedAnswer = accItem.parentElement.querySelector('.questions-accordion__item-descrip');
+
+    accItem.classList.remove('active');
+    minusIcon.classList.remove('active');
+    plusIcon.classList.add('active');
+    showedAnswer.classList.remove('active');
 }
 
 function toggleActive(el) {
