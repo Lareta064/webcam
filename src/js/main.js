@@ -28,7 +28,34 @@ function hideMobMenu() {
         mobMenu.classList.remove('active');
     }
 }
+// accordion
+let clickableItem = document.querySelectorAll('.questions-accordion-toggle');
+let answerBlock = document.querySelectorAll('.questions-accordion__item-descrip');
 
+for (let i = 0; i < clickableItem.length; i++) {
+    clickableItem[i].onclick = function () {
+        const plusMinusIcons = this.querySelectorAll('i');
+        const showedAnswer = this.parentElement.querySelector('.questions-accordion__item-descrip');
+
+        // console.log(plusMinusIcons);
+        // console.log(showedAnswer);
+        toggleActive(this)
+        for (let i = 0; i < plusMinusIcons.length; i++) {
+
+            toggleActive(plusMinusIcons[i]);
+        }
+        toggleActive(showedAnswer);
+
+    }
+}
+
+function toggleActive(el) {
+    if (el.classList.contains('active')) {
+        el.classList.remove('active');
+    } else {
+        el.classList.add('active');
+    }
+}
 //-jQuery
 $(document).ready(function () {
 
