@@ -1,31 +1,31 @@
 @font-face {
 	font-family: "Gotham Pro";
-	src: url("/fonts/GothaProReg.otf") format("opentype");
+	src: url("../fonts/GothaProReg.otf") format("opentype");
 }
 
 @font-face {
 	font-family: 'Gotham Pro Light';
-	src: url('/fonts/GothamPro-Light.eot');
-	src: url('/fonts/GothamPro-Light.eot?#iefix') format('embedded-opentype'),
-		url('/fonts/GothamPro-Light.woff') format('woff'),
-		url('/fonts/GothamPro-Light.ttf') format('truetype');
+	src: url('../fonts/GothamPro-Light.eot');
+	src: url('../fonts/GothamPro-Light.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/GothamPro-Light.woff') format('woff'),
+		url('../fonts/GothamPro-Light.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: "GothamProBlack";
-	src: url("/fonts/GothamProBla.otf") format("opentype");
+	src: url("../fonts/GothamProBla.otf") format("opentype");
 }
 
 @font-face {
 	font-family: "GothamPrMedium";
-	src: url("/fonts/GothamPrMed.otf") format("opentype");
+	src: url("../fonts/GothamPrMed.otf") format("opentype");
 }
 
 @font-face {
 	font-family: "PlayfairDisplay-Bold";
-	src: url("/fonts/PlayfairDisplay-Bold.ttf") format("opentype");
+	src: url("../fonts/PlayfairDisplay-Bold.ttf") format("opentype");
 }
 
 * {
@@ -275,4 +275,101 @@ section {
 	bottom: -20px;
 	background-color: #fff;
 
+}
+
+.page-button.page-button--small {
+	width: 145px;
+	height: 35px;
+	font-size: 15px;
+	padding-top: 5px;
+	text-align: center;
+	padding-left: 10%;
+	margin-top: 5px;
+
+	@media(min-width:768px) {
+		margin-left: auto;
+		;
+	}
+}
+
+#modal-form {
+	.title-2 {
+		margin-bottom: 20px;
+
+		@media(min-width: 992px) {
+			font-size: 26px;
+
+		}
+
+		@media(min-width: 1440px) {
+			font-size: 32px;
+		}
+	}
+
+	.boxShadowCard {
+		@media(min-width: 1200px) {
+			padding: 30px 30px;
+		}
+
+		@media(min-width: 1440px) {
+			padding: 30px 30px;
+			margin: 25px;
+		}
+	}
+
+	.modal-dialog {
+		max-width: 600px;
+	}
+
+	.boxShadowCard:after {
+		display: none;
+	}
+}
+
+#contact-form {
+	padding-top: 40px;
+}
+
+.custom-input {
+	width: 100%;
+	max-width: 340px;
+	height: 80px;
+	border-radius: 50px;
+	display: block;
+	margin-bottom: 35px;
+	border: 0px;
+
+	margin-left: auto;
+	margin-right: auto;
+
+}
+
+.custom-input[type='text'] {
+	background-color: #f7f7f7;
+	padding-left: 40px;
+}
+
+.custom-input[type='submit'] {
+	cursor: pointer;
+	background: rgb(251, 158, 220);
+	background: linear-gradient(326deg, rgba(251, 158, 220, 1) 0%, rgba(181, 207, 250, 1) 100%);
+
+	transition: .7s;
+	box-shadow: 0px 13px 12px -12px #de85ba;
+}
+
+.form-button:hover {
+	background: linear-gradient(326deg, rgba(251, 158, 220, 1) 0%, rgba(251, 158, 220, 1) 100%);
+}
+
+.small-text {
+	font-size: 14px;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+
+	a {
+		color: @pink;
+	}
 }

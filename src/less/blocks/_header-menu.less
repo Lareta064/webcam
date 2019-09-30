@@ -26,8 +26,12 @@
 
 .logo {
     width: 12%;
-    min-width: 70px;
+    min-width: 110px;
     max-width: 150px;
+
+    @media(min-width: 768px) {
+        min-width: 70px;
+    }
 }
 
 .header-navigation {
@@ -66,7 +70,7 @@
     padding-bottom: 6px;
 }
 
-.header-contact-phone {
+.contact-phone {
     font-weight: 700;
 }
 
@@ -77,5 +81,13 @@
 
     @media(min-width: 768px) {
         display: none;
+    }
+}
+
+.header-contact {
+    position: relative;
+
+    @media(min-width:992px) {
+        top: 20px;
     }
 }

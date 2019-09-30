@@ -15,8 +15,42 @@ footer.footer
                         img(src="img/doc3.png", alt="sertificate")
         
         .row
-            .col-md-10.offset-md-1.col-lg-8.offset-lg-2
+            .col-lg-10.offset-lg-1.col-xl-8.offset-xl-2
                 .footer-slogan
                     .title-3.text-center Мы первая сертифицированная вебкам компания в России и странах СНГ 
         .footer-contacts
+            .row
+                .col-md-4.order-md-4.col-xl-3
+                    .contact-phone-block    
+                        a(href="tel:89886030225").contact-phone.d-none.d-md-block 8&nbsp;988&nbsp;603-02-25
+                        a.page-button.page-button--small(href="tel:89886030225") позвони мне
+                        //- a(href="tel:89886030225").contact-phone-button
+                        //-     span.phone-icon
+                        //-         i.fas.fa-phone-volume
+                        //-     span.button-text позвоните мне
+                .col-md-2.order-md-3
+                    .social-block
+                        a(href="https://vk.com/id256209795" target="_blank").social-block__item
+                            i.fab.fa-vk
+                        a(href="https://vk.com/id256209795" target="_blank").social-block__item
+                            i.fab.fa-whatsapp
+                .col-md-3.order-md-1.col-lg-2
+                    .logo
+                        img(src="img/logo.png", alt="logo")
+                .col-md-3.order-md-2.col-lg-4
+                    a(href="#").basic-text Политика конфеденциальности
+// Modal-4
+#modal-form.modal.fade(tabindex="-1" role="dialog" aria-labelledby="modal-form" aria-hidden="true")
+    .modal-dialog.modal-dialog-centered(role="document")
+        .modal-content.boxShadowCard                            
+            button.close(type="button" data-dismiss="modal" aria-label="Close")
+                 span(aria-hidden="true") ×
+            .modal-body
+                
+                .title-2  Введите ваш номер телефона,
+                .basic-text и менеджер позвонит вам сейчас или в удобное для звонка время
+                form#contact-form(action="")
+                    input(type="text" name = 'phone' class='phone custom-input' placeholder='Введите ваш телефон')
+                    input(type="submit" name = 'sendPhone' class='custom-input form-button' value = 'позвоните мне')
+                    p.small-text Нажимая на кнопку «Позвоните мне», вы принимаете #[a(href="#") условия передачи] данных
             
