@@ -4,11 +4,17 @@
             .logo
                 img(src="img/logo.png", alt="logo")
             nav.header-navigation
-                a(href="#").header-navigation-item О нас
-                a(href="#").header-navigation-item Выплаты
-                a(href="#").header-navigation-item Средства платежа
-                a(href="#").header-navigation-item Как работаем
-                a(href="#").header-navigation-item Вопросы
-            .header-contact    
-                a(href="tel:89886030225").header-contact-phone 8&nbsp;988&nbsp;603-02-25
-            #mob-menu-toggle.mob-menu-toggle |||
+                a(href="#about").header-navigation-item О нас
+                a(href="#money").header-navigation-item Выплаты
+                a(href="#payments").header-navigation-item Средства платежа
+                a(href="#work").header-navigation-item Как работаем
+                a(href="#questions").header-navigation-item Вопросы
+            .header-contact.contact-phone-block.d-none.d-md-block    
+                a(href="tel:89886030225").contact-phone.text-right 8&nbsp;988&nbsp;603-02-25
+                a.page-button.page-button--small.d-none.d-lg-block(href="tel:89886030225") позвоните мне
+                //- a(href="tel:89886030225").contact-phone-button
+                    //- span.phone-icon
+                    //-     i.fas.fa-phone-volume
+                    //- span.button-text позвоните мне
+            #mob-menu-toggle.mob-menu-toggle
+                i.fas.fa-bars

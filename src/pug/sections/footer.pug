@@ -1,0 +1,60 @@
+footer.footer
+    .container
+        h2.title-2 #[span.title-2__part контакты]
+        .footer-img
+            .title-3.wd50.text-center Наши сертификаты
+            .row
+                .col-sm-4.col-xl-2.offset-xl-3
+                    .footer-img__item               
+                        a.fancybox.footer-img__item(rel="group" href="img/doc11.jpg")
+                            img(src="img/doc1.png", alt="sertificate")
+                .col-sm-4.col-xl-2
+                    .footer-img__item
+                        a.fancybox.footer-img__item(rel="group" href="img/doc12.jpg")
+                            img(src="img/doc2.png", alt="sertificate")
+                .col-sm-4.col-xl-2
+                    .footer-img__item
+                        a.fancybox.footer-img__item(rel="group" href="img/doc13.jpg")
+                            img(src="img/doc3.png", alt="sertificate")
+        
+        .row
+            .col-lg-10.offset-lg-1.col-xl-8.offset-xl-2
+                .footer-slogan
+                    .title-3.text-center Мы первая сертифицированная вебкам компания в России и странах СНГ 
+        .footer-contacts
+            .row
+                .col-md-4.order-md-4.col-xl-3
+                    .contact-phone-block    
+                        a(href="tel:89886030225").contact-phone.d-none.d-md-block 8&nbsp;988&nbsp;603-02-25
+                        a.page-button.page-button--small(href="tel:89886030225") позвони мне
+                        
+                .col-md-2.order-md-3
+                    .social-block
+                        a(href="https://vk.com/id256209795" target="_blank").social-block__item
+                            i.fab.fa-vk
+                        a(href="https://wa.me/79886030225" target="_blank").social-block__item
+                            i.fab.fa-whatsapp
+                .col-md-3.order-md-1.col-lg-2
+                    .logo
+                        img(src="img/logo.png", alt="logo")
+                .col-md-3.order-md-2.col-lg-4
+                    a(href="#").basic-text Политика конфеденциальности
+// Modal-4
+#modal-form.modal.fade(tabindex="-1" role="dialog" aria-labelledby="modal-form" aria-hidden="true")
+    .modal-dialog.modal-dialog-centered(role="document")
+        .modal-content.boxShadowCard                            
+            button.close(type="button" data-dismiss="modal" aria-label="Close")
+                 span(aria-hidden="true") ×
+            .modal-body
+                
+                .title-2  Введите ваш номер телефона,
+                .basic-text и менеджер позвонит вам сейчас или в удобное для звонка время
+                form#contact-form(action="php/mail.php" method = 'POST')
+                    input(type="hidden" name="project_name" value="WebCam.ru") 
+                    input(type="hidden" name="admin_email" value="lareta1@yandex.ru ") 
+                    input(type="hidden" name="email_from" value="info@webcam.ru")
+
+                    input(type="text" name = 'phone' class='phone custom-input' placeholder='Введите ваш телефон')
+                    input#send-form(type="submit" name = 'sendPhone' class='custom-input form-button' value = 'позвоните мне')
+                    p.small-text Нажимая на кнопку «Позвоните мне», вы принимаете #[a(href="#") условия передачи] данных
+            
