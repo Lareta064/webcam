@@ -79,7 +79,8 @@ img {
 }
 
 input,
-button {
+button,
+a {
 	outline: none !important;
 }
 
@@ -136,6 +137,7 @@ section {
 }
 
 .page-button {
+	position: relative;
 	font-size: 18px;
 	width: 260px;
 	height: 70px;
@@ -153,6 +155,22 @@ section {
 		height: 80px;
 		padding-top: 30px;
 	}
+}
+
+.page-button:after {
+	content: "";
+	position: absolute;
+	right: -18px;
+	top: -27px;
+	background: url(../img/webcam.png);
+	background-position: center;
+	width: 75px;
+	height: 110px;
+	background-repeat: no-repeat;
+}
+
+.page-button.page-button--small:after {
+	display: none;
 }
 
 .page-button:hover,
@@ -278,18 +296,24 @@ section {
 }
 
 .page-button.page-button--small {
-	width: 145px;
+	width: 155px;
 	height: 35px;
 	font-size: 15px;
 	padding-top: 5px;
 	text-align: center;
-	padding-left: 10%;
+	padding-left: 5%;
 	margin-top: 5px;
+	background: rgb(27, 122, 190);
+	background: linear-gradient(326deg, rgba(27, 122, 190, 1) 6%, rgba(82, 192, 231, 0.5802696078431373) 70%);
 
 	@media(min-width:768px) {
 		margin-left: auto;
 		;
 	}
+}
+
+.page-button.page-button--small:hover {
+	opacity: .6;
 }
 
 #modal-form {

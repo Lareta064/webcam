@@ -59,6 +59,10 @@
     .header-navigation-item {
         text-align: center;
         margin-bottom: 20px;
+
+        &:hover {
+            color: #fff;
+        }
     }
 }
 
@@ -78,10 +82,17 @@
     display: block;
     position: relative;
     z-index: 110;
+    font-size: 30px;
+    cursor: pointer;
+    transition: .5s;
 
     @media(min-width: 768px) {
         display: none;
     }
+}
+
+.mob-menu-toggle:hover {
+    color: #fff;
 }
 
 .header-contact {
